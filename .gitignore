@@ -100,3 +100,6 @@ dev/Lib/site-packages/rest_framework/utils/__pycache__/serializer_helpers.cpytho
 dev/Lib/site-packages/rest_framework/utils/__pycache__/timezone.cpython-312.pyc
 dev/Lib/site-packages/rest_framework/utils/__pycache__/urls.cpython-312.pyc
 drf/__pycache__/wsgi.cpython-312.pyc
+biblioteca/__pycache__/serializer.cpython-312.pyc
+biblioteca/__pycache__/urls.cpython-312.pyc
+biblioteca/__pycache__/views.cpython-312.pyc
