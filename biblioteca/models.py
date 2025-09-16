@@ -1,15 +1,18 @@
 from django.db import models
+import datetime
+
+ahora = datetime.datetime.now
 
 # Create your models here.
 class Comuna(models.Model):
     codigo = models.CharField(max_length=5, null=False)
     nombre_comuna = models.CharField(max_length=50, null=False) 
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(default=ahora)
     updated_at = models.DateTimeField(auto_now=True)
 
 class Nacionalidad(models.Model):
     pais = models.CharField(max_length=255, null=False)
-    Nacionalidad = models.CharField(max_length=255, null=False)
+    nombre_nacionalidad = models.CharField(max_length=255, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

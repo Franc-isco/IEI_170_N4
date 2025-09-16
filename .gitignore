@@ -103,3 +103,4 @@ drf/__pycache__/wsgi.cpython-312.pyc
 biblioteca/__pycache__/serializer.cpython-312.pyc
 biblioteca/__pycache__/urls.cpython-312.pyc
 biblioteca/__pycache__/views.cpython-312.pyc
+biblioteca/migrations/__pycache__/0002_alter_comuna_created_at.cpython-312.pyc

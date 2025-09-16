@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Nacionalidades</title>
+</head>
+<body>
+    <h1>Listado de Nacionalidades</h1>
+
+    <ul>
+        {% for nacionalidad in object_list %}
+            <li>{{ nacionalidad.nombre_nacionalidad }}</li>
+        {% empty %}
+            <li>No hay nacionalidades registradas.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

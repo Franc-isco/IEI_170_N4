@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Inicio</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'biblioteca/css/bootstrap.css' %}">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4 mb-4">
+        <h1 class="mb-1">{{ mensaje }}</h1>
+        <p class="mb-0">Selecciona una opción para gestionar tu biblioteca</p>
+    </header>
+
+    <!-- Contenedor de tarjetas -->
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/libro/" class="stretched-link fw-bold">Gestionar Libros</a>
+                        <p class="text-muted small mt-2">Agregar, editar o eliminar libros disponibles</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/lector/" class="stretched-link fw-bold">Ver Lectores</a>
+                        <p class="text-muted small mt-2">Revisar y administrar los lectores registrados</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/biblioteca/" class="stretched-link fw-bold">Administrar Bibliotecas</a>
+                        <p class="text-muted small mt-2">Gestionar las sucursales de la biblioteca</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/autor/" class="stretched-link fw-bold">Registrar Autores</a>
+                        <p class="text-muted small mt-2">Agregar o editar autores de los libros</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/nacionalidad/" class="stretched-link fw-bold">Administrar Nacionalidades</a>
+                        <p class="text-muted small mt-2">Gestionar nacionalidades de autores o lectores</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/comuna/" class="stretched-link fw-bold">Administrar Comunas</a>
+                        <p class="text-muted small mt-2">Revisar y gestionar las comunas registradas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/direccion/" class="stretched-link fw-bold">Gestionar Direcciones</a>
+                        <p class="text-muted small mt-2">Administrar direcciones de lectores y bibliotecas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/prestamo/" class="stretched-link fw-bold">Gestionar Préstamos</a>
+                        <p class="text-muted small mt-2">Registrar y controlar préstamos de libros</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body">
+                        <a href="/admin/biblioteca/categoria/" class="stretched-link fw-bold">Gestionar Categorías</a>
+                        <p class="text-muted small mt-2">Administrar categorías de los libros</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-4 text-muted">
+        <p class="mb-0">Biblioteca - Administración de modelos con Django</p>
+    </footer>
+
+</body>
+</html>

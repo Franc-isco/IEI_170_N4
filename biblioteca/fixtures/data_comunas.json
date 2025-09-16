@@ -1,0 +1,236 @@
+[
+  {
+    "model": "biblioteca.comuna",
+    "pk": 1,
+    "fields": {
+      "codigo": "01101",
+      "nombre_comuna": "Iquique",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 2,
+    "fields": {
+      "codigo": "01107",
+      "nombre_comuna": "Alto Hospicio",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 3,
+    "fields": {
+      "codigo": "01401",
+      "nombre_comuna": "Pozo Almonte",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 4,
+    "fields": {
+      "codigo": "01402",
+      "nombre_comuna": "Camiña",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 5,
+    "fields": {
+      "codigo": "01403",
+      "nombre_comuna": "Colchane",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 6,
+    "fields": {
+      "codigo": "01404",
+      "nombre_comuna": "Huara",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 7,
+    "fields": {
+      "codigo": "01405",
+      "nombre_comuna": "Pica",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 8,
+    "fields": {
+      "codigo": "02101",
+      "nombre_comuna": "Antofagasta",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 9,
+    "fields": {
+      "codigo": "02102",
+      "nombre_comuna": "Mejillones",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 10,
+    "fields": {
+      "codigo": "02103",
+      "nombre_comuna": "Sierra Gorda",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 11,
+    "fields": {
+      "codigo": "02104",
+      "nombre_comuna": "Taltal",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 12,
+    "fields": {
+      "codigo": "02201",
+      "nombre_comuna": "Calama",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 13,
+    "fields": {
+      "codigo": "02202",
+      "nombre_comuna": "Ollagüe",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 14,
+    "fields": {
+      "codigo": "02203",
+      "nombre_comuna": "San Pedro de Atacama",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 15,
+    "fields": {
+      "codigo": "02301",
+      "nombre_comuna": "Tocopilla",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 16,
+    "fields": {
+      "codigo": "02302",
+      "nombre_comuna": "María Elena",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 17,
+    "fields": {
+      "codigo": "03101",
+      "nombre_comuna": "Copiapó",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 18,
+    "fields": {
+      "codigo": "03102",
+      "nombre_comuna": "Caldera",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 19,
+    "fields": {
+      "codigo": "03103",
+      "nombre_comuna": "Tierra Amarilla",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 20,
+    "fields": {
+      "codigo": "03201",
+      "nombre_comuna": "Chañaral",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 21,
+    "fields": {
+      "codigo": "03202",
+      "nombre_comuna": "Diego de Almagro",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 22,
+    "fields": {
+      "codigo": "03301",
+      "nombre_comuna": "Vallenar",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 23,
+    "fields": {
+      "codigo": "03302",
+      "nombre_comuna": "Alto del Carmen",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 24,
+    "fields": {
+      "codigo": "03303",
+      "nombre_comuna": "Freirina",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 25,
+    "fields": {
+      "codigo": "03304",
+      "nombre_comuna": "Huasco",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  },
+  {
+    "model": "biblioteca.comuna",
+    "pk": 26,
+    "fields": {
+      "codigo": "04101",
+      "nombre_comuna": "La Serena",
+      "updated_at": "2025-09-15T03:13:00Z"
+    }
+  }
+]
