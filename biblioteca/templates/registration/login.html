@@ -1,31 +1,28 @@
-{% extends "base_generic.html" %}
+{% extends "plantilla_base.html" %}
 {% block content %}
-<div class="login-container">
-  <h3 class="text-center mb-4">Inicio de sesión</h3>
-
-  {% if form.errors %}
-    <div class="alert alert-danger">
-      Usuario o contraseña incorrectos. Inténtalo nuevamente.
-    </div>
-  {% endif %}
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="mb-4 text-center">Iniciar sesión</h2>
 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <div class="mb-3">
-      <label for="id_username" class="form-label">Nombre de usuario</label>
-      {{ form.username }}
+      <label for="username" class="form-label">Nombre Usuario:</label>
+      <input type="text" id="username" name="username" class="form-control" required>
     </div>
     <div class="mb-3">
-      <label for="id_password" class="form-label">Contraseña</label>
-      {{ form.password }}
+      <label for="password" class="form-label">Contraseña:</label>
+      <input type="password" id="password" name="password" class="form-control" required>
     </div>
-
-    <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+    {% if form.errors %}
+      <p class="text-danger">Usuario o contraseña incorrectos.</p>
+    {% endif %}
+    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
   </form>
 
-  <div class="text-center mt-3">
-    <a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a>
+  <div class="mt-3 text-center">
+    <a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a><br>
+    <span>¿No tienes una cuenta? </span>
+    <a href="{% url 'registro' %}">Regístrate aquí</a>
   </div>
 </div>
 {% endblock %}

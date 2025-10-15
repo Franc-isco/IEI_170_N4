@@ -135,3 +135,12 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 🔹 La sesión expira después de 1 hora (3600 segundos)
+SESSION_COOKIE_AGE = 3600
+
+# 🔹 La sesión expira automáticamente al cerrar el navegador
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# 🔹 Usamos la base de datos para almacenar las sesiones
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'

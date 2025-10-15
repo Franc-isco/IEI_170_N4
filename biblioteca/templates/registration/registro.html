@@ -1,0 +1,53 @@
+{% extends "plantilla_base.html" %}
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card shadow-lg border-0 p-4" style="max-width: 450px; width: 100%;">
+    <h3 class="text-center mb-4 text-primary fw-bold">Crear una cuenta</h3>
+
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="mb-3">
+          <label for="{{ field.id_for_label }}" class="form-label fw-semibold">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}
+            <div class="form-text text-muted small">{{ field.help_text }}</div>
+          {% endif %}
+          {% for error in field.errors %}
+            <div class="text-danger small">{{ error }}</div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} mt-2" role="alert">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+
+      <button type="submit" class="btn btn-success w-100 fw-semibold">Registrarse</button>
+    </form>
+
+    <div class="text-center mt-3">
+      <p class="mb-0">¿Ya tienes una cuenta?
+        <a href="{% url 'login' %}" class="text-primary fw-semibold">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    background: #f8f9fa;
+  }
+  .card {
+    border-radius: 12px;
+  }
+  input.form-control, input[type="password"] {
+    border-radius: 8px;
+  }
+  button.btn-success {
+    border-radius: 8px;
+  }
+</style>
+{% endblock %}

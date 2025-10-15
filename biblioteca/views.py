@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, ListView
 from django.contrib.auth.decorators import login_required
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-from rest_framework.permissions import IsAuthenticated
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, logout
 
 from rest_framework import viewsets
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
@@ -15,7 +16,57 @@ from .models import Nacionalidad, Autor, Comuna, Direccion, Biblioteca, Lector, 
 
 @login_required(login_url='login')
 def pagina_inicio(request):
-    return render(request, 'biblioteca/inicio.html')
+    # 🔹 Almacenar data en SESSION
+    request.session['mensaje_bienvenida'] = '¡Bienvenido a la Biblioteca!'
+
+    # 🔹 Obtener data desde SESSION
+    mensaje_bienvenida = request.session.get('mensaje_bienvenida', 'Hola :)')
+
+    # 🔹 Remover data desde SESSION (opcional)
+    if 'mensaje_bienvenida' in request.session:
+        del request.session['mensaje_bienvenida']
+
+    # 🔹 Enviar al template
+    return render(request, 'biblioteca/inicio.html', {'mensaje': mensaje_bienvenida})
+
+# 🔹 Vista de registro de nuevos usuarios
+def registro(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, "Registro exitoso. ¡Bienvenido!")
+            return redirect('/')
+        else:
+            messages.error(request, "No ha sido posible registrarte. Revisa el formulario por errores.")
+    else:
+        form = UserCreationForm()
+        for field in form.fields.values():
+            field.widget.attrs['class'] = 'form-control'
+
+    return render(request, 'registration/registro.html', {'form': form})
+
+
+@login_required(login_url='login')
+def vista_protegida(request):
+    request.session['mensaje_bienvenida'] = '¡Bienvenido/a a la vista protegida!'
+    mensaje = request.session.get('mensaje_bienvenida', 'Sin mensaje disponible')
+
+    return render(request, 'biblioteca/vista_protegida.html', {'mensaje': mensaje})
+
+def logout_view(request):
+    # 🔹 Cierra la sesión del usuario
+    logout(request)
+
+    # 🔹 Limpia los datos almacenados en SESSION (por si los usaste)
+    request.session.flush()
+
+    # 🔹 (Opcional) puedes agregar un mensaje flash
+    messages.success(request, "Has cerrado sesión correctamente.")
+
+    # 🔹 Redirige al login
+    return redirect('login')
 
 # Create your views here.
 class Nacionalidad_ViewSet(viewsets.ModelViewSet):

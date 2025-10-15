@@ -1,18 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca - Inicio</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'biblioteca/css/bootstrap.css' %}">
 </head>
+
 <body class="bg-light">
 
     <!-- Header -->
     <header class="bg-dark text-white text-center py-4 mb-4">
         <h1 class="mb-1">{{ mensaje }}</h1>
         <p class="mb-0">Selecciona una opción para gestionar tu biblioteca</p>
+
+        <!-- 🔹 Botón de cierre de sesión -->
+        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-light btn-sm position-absolute end-0 top-0 m-3">
+                Cerrar sesión
+            </button>
+        </form>
     </header>
 
     <!-- Contenedor de tarjetas -->
@@ -40,7 +50,8 @@
             <div class="col-md-4 col-lg-3">
                 <div class="card shadow-sm h-100 text-center">
                     <div class="card-body">
-                        <a href="/admin/biblioteca/biblioteca/" class="stretched-link fw-bold">Administrar Bibliotecas</a>
+                        <a href="/admin/biblioteca/biblioteca/" class="stretched-link fw-bold">Administrar
+                            Bibliotecas</a>
                         <p class="text-muted small mt-2">Gestionar las sucursales de la biblioteca</p>
                     </div>
                 </div>
@@ -58,7 +69,8 @@
             <div class="col-md-4 col-lg-3">
                 <div class="card shadow-sm h-100 text-center">
                     <div class="card-body">
-                        <a href="/admin/biblioteca/nacionalidad/" class="stretched-link fw-bold">Administrar Nacionalidades</a>
+                        <a href="/admin/biblioteca/nacionalidad/" class="stretched-link fw-bold">Administrar
+                            Nacionalidades</a>
                         <p class="text-muted small mt-2">Gestionar nacionalidades de autores o lectores</p>
                     </div>
                 </div>
@@ -109,4 +121,5 @@
     </footer>
 
 </body>
+
 </html>

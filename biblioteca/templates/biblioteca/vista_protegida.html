@@ -1,0 +1,28 @@
+{% extends "plantilla_base.html" %}
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card shadow-lg border-0 p-5 text-center" style="max-width: 600px;">
+        <h2 class="text-success mb-3">Vista Protegida 🔒</h2>
+        <p class="lead">Solo los usuarios autenticados pueden ver esta página.</p>
+
+        <div class="mt-4">
+            <a href="{% url 'home' %}" class="btn btn-outline-primary me-2">🏠 Volver al inicio</a>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">🚪 Cerrar sesión</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        border-radius: 12px;
+        background-color: white;
+    }
+</style>
+{% endblock %}
