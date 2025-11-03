@@ -26,6 +26,20 @@ def validar_mayor_edad(fecha_nacimiento):
 
     if edad < 18:
         raise ValidationError('El lector debe ser mayor de 18 años.')
+    
+# 🔹 Validador de ISBN (formato básico ISBN-13)
+def validar_isbn(isbn):
+    if isbn is None or isbn == '':
+        raise ValidationError('Debe ingresar un ISBN.')
+    # Eliminar guiones o espacios, por si el usuario escribe algo como "978-1234567890"
+    isbn_limpio = isbn.replace('-', '').replace(' ', '')
+    # Debe tener solo números
+    if not isbn_limpio.isdigit():
+        raise ValidationError('El ISBN debe contener solo números.')
+    # Debe tener exactamente 13 dígitos (ISBN-13)
+    if len(isbn_limpio) != 13:
+        raise ValidationError('El ISBN debe tener exactamente 13 dígitos.')
+
 
 class Comuna(models.Model):
     codigo = models.CharField(max_length=5, null=False)
@@ -112,6 +126,7 @@ class Libro(models.Model):
     id_autor = models.ForeignKey(Autor, on_delete=models.CASCADE, null=False)
     paginas = models.IntegerField()
     copias = models.IntegerField()
+    isbn = models.CharField(max_length=13, unique= True, null= False, blank= False, validators=[validar_isbn])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

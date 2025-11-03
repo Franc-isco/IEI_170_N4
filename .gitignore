@@ -106,3 +106,4 @@ biblioteca/__pycache__/views.cpython-312.pyc
 biblioteca/migrations/__pycache__/0002_alter_comuna_created_at.cpython-312.pyc
 biblioteca/migrations/__pycache__/0003_remove_lector_digito_verificador_alter_lector_rut.cpython-312.pyc
 biblioteca/migrations/__pycache__/0004_lector_correo_lector_lector_fecha_nacimiento_and_more.cpython-312.pyc
+biblioteca/migrations/__pycache__/0005_libro_isbn_alter_lector_fecha_nacimiento.cpython-312.pyc
