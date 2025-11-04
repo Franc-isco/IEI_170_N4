@@ -14,7 +14,7 @@ from .models import Nacionalidad, Autor, Comuna, Direccion, Biblioteca, Lector, 
 #def pagina_inicio(request):
     #return render(request, 'biblioteca/inicio.html')
 
-@login_required(login_url='login')
+@login_required()
 def pagina_inicio(request):
     # 🔹 Almacenar data en SESSION
     request.session['mensaje_bienvenida'] = '¡Bienvenido a la Biblioteca!'
@@ -48,7 +48,7 @@ def registro(request):
     return render(request, 'registration/registro.html', {'form': form})
 
 
-@login_required(login_url='login')
+@login_required()
 def vista_protegida(request):
     request.session['mensaje_bienvenida'] = '¡Bienvenido/a a la vista protegida!'
     mensaje = request.session.get('mensaje_bienvenida', 'Sin mensaje disponible')
